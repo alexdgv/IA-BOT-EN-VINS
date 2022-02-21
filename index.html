@@ -1,0 +1,184 @@
+<!doctype html>
+
+<head>
+    <title>GUS Bot en vin - Domaine du Bon Vin</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/cover.css">
+    <link rel="stylesheet" href="css/gus.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+
+<body class="d-flex h-100 text-white bg-dark">
+
+    <div class="d-flex w-100 h-100 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <a onclick="showHome()" href="#" class="link-light">
+                    <h3 class="float-md-start mb-0">
+                        <div class="gus-logo">
+                            <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0, 0, 400,400"><g id="svgg"><path id="path0" d="M262.667 7.573 C 260.100 7.837,256.650 8.353,255.000 8.719 L 252.000 9.384 252.000 58.832 L 252.000 108.280 239.872 121.618 C 221.518 141.802,223.391 125.974,222.966 264.515 C 222.556 397.817,221.971 389.237,231.654 391.926 C 238.302 393.773,312.352 393.776,318.998 391.930 C 328.624 389.257,328.127 396.546,327.708 264.320 L 327.333 146.000 324.364 139.566 C 322.730 136.027,316.281 127.700,310.030 121.060 L 298.667 108.988 298.667 59.224 L 298.667 9.459 293.667 8.070 C 288.958 6.763,273.033 6.507,262.667 7.573 M82.919 123.000 C 62.564 193.192,66.866 228.164,99.053 254.151 C 121.105 271.956,123.679 279.919,124.289 332.217 C 124.625 361.130,124.411 365.135,122.319 368.961 C 117.075 378.555,109.627 382.501,94.667 383.614 C 85.108 384.325,81.333 385.613,81.333 388.163 C 81.333 388.813,103.256 389.333,130.667 389.333 C 158.078 389.333,180.000 388.813,180.000 388.163 C 180.000 385.582,176.176 384.322,166.157 383.602 C 152.355 382.609,144.582 378.744,140.000 370.595 L 136.667 364.667 137.025 331.461 C 137.582 279.856,140.579 270.820,162.876 253.521 C 189.236 233.069,194.569 213.022,187.224 162.000 C 185.317 148.756,178.355 120.401,175.871 115.759 C 174.656 113.488,171.734 113.333,130.147 113.333 L 85.722 113.333 82.919 123.000 " stroke="none" fill="#fff" fill-rule="evenodd"></path></g></svg>
+                            <span class="gus-vin-blanc">
+								GUS
+							</span>
+
+                        </div>
+                    </h3>
+                </a>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link active" aria-current="page" class="nav-link" onclick="showHome()" href="#" id="linkhome">Accueil</a>
+                    <a class="nav-link" onclick="showChat()" href="#" id="linkchat">Chat avec Gus</a>
+                    <a class="nav-link" onclick="showAbout()" href="#" id="linkabout">À propos</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="px-3">
+
+            <div id="aboutgus" class="container d-none">
+
+
+                <div class="p-5 mb-4 bg-dark rounded-3">
+                    <div class="container-fluid">
+                        <h1 class="display-5 fw-bold gus-vin-blanc">GUS - À propos</h1>
+                        <h4 class="font-weight-light">Projet - Université de Namur (IHDCM036 - Techniques d'Intelligence Artificielle)</h4>
+                        <p class="col-md-12 fs-4 pt-5">
+                            Cette application permet de voir l'utilisation du langage déclaratif Prolog par l'intermédiaire du Tau-Prolog. Nous avons utilisé une librairie de reconnnaissance vocale, l'API <span class="gus-vin-blanc">"SpeechRecognition"</span>                            en JavaScript.
+                        </p>
+                        <p class="col-md-8 fs-4">
+                            Gus va vous aider à sélectionner le meilleur pour votre repas de fête! Saviez-vous qu'en vin, vos différents sens sont utilisés? <br /><br /> Cliquez sur l'un d'entre eux pour en savoir plus...
+                        </p>
+                        <p>
+                            <a id="link-nez" class="btn btn-outline-light  btn-lg" data-bs-toggle="collapse" href="#collapsenez" role="button" aria-expanded="false" aria-controls="collapsenez" style="border-radius: 50%;">
+
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 118.97 122.88" style="enable-background:new 0 0 118.97 122.88" xml:space="preserve">
+									<g>
+										<path
+											d="M26.07,108.05c-0.65,0.23-1.34,0.17-1.92-0.11c-0.59-0.28-1.07-0.78-1.31-1.45l-0.01-0.03c-0.23-0.65-0.17-1.34,0.11-1.92 c0.28-0.59,0.78-1.07,1.45-1.31c1.23-0.44,3.08-0.19,5.24,0.47c2.09,0.64,4.47,1.67,6.84,2.82c2.18,1.06,4.39,2.24,6.3,3.29 c1.93,1.06,3.51,1.98,4.49,2.55c2.61,1.52,5.1,2.45,7.45,2.94c2.35,0.49,4.59,0.54,6.7,0.3c2.15-0.24,4.21-0.77,6.15-1.44 c1.96-0.67,3.79-1.48,5.47-2.25c0.75-0.34,1.61-0.8,2.54-1.32c0.98-0.55,1.95-1.12,2.94-1.71c2.53-1.49,5.2-3.07,7.74-4.17 c2.59-1.13,5.04-1.77,7.1-1.35c0.03,0,0.06,0.01,0.08,0.02c0.67,0.15,1.22,0.55,1.57,1.09c0.35,0.53,0.5,1.2,0.37,1.87 c0,0.03-0.01,0.06-0.02,0.08c-0.15,0.67-0.55,1.22-1.09,1.57c-0.54,0.36-1.23,0.51-1.91,0.36c-2.16-0.45-6.94,2.37-11.24,4.9l0,0 c-0.02,0.01-0.04,0.03-0.06,0.04c-1.08,0.64-2.13,1.26-3.07,1.78c-0.99,0.56-1.94,1.06-2.83,1.46c-1.87,0.85-3.9,1.74-6.08,2.49 c-2.2,0.75-4.57,1.36-7.12,1.63c-2.59,0.28-5.33,0.23-8.22-0.36c-2.88-0.59-5.9-1.7-9.04-3.54c-0.97-0.57-2.54-1.48-4.37-2.48 c-1.84-1.01-3.97-2.15-6.08-3.18c-1.93-0.94-3.8-1.8-5.31-2.37c-1.42-0.54-2.46-0.83-2.82-0.7L26.07,108.05L26.07,108.05z M25.92,107.56c-1.06,0.38-2.23-0.17-2.61-1.24c-0.38-1.06,0.17-2.23,1.24-2.61c2.23-0.8,6.98,0.98,11.69,3.27 c4.36,2.13,8.79,4.67,10.75,5.82c5.32,3.1,10.15,3.78,14.46,3.3c4.4-0.48,8.37-2.17,11.78-3.73c1.55-0.71,3.48-1.85,5.53-3.05 c5.03-2.96,10.64-6.27,14.52-5.46c1.1,0.23,1.81,1.31,1.58,2.41s-1.31,1.81-2.41,1.58c-2.35-0.49-7.24,2.39-11.63,4.98 c-2.13,1.26-4.16,2.45-5.89,3.24c-3.7,1.69-8.04,3.53-13.04,4.08c-5.09,0.56-10.76-0.22-16.95-3.83 c-1.92-1.12-6.26-3.62-10.48-5.68C30.57,108.76,26.9,107.21,25.92,107.56L25.92,107.56z M39.65,2.34c0.22-1.21,1.39-2.02,2.6-1.8 c1.21,0.22,2.02,1.39,1.8,2.6l-1.87,10.02c-0.01,0.06-0.02,0.12-0.04,0.17c-1.13,5.05-2.46,9.68-3.77,14.27 c-2.48,8.69-4.93,17.23-5.59,26.66c-0.21,3.01-0.2,5.13-0.19,6.77c0.04,6.54,0.04,6.86-8.55,13.53 c-6.36,4.94-10.8,9.24-13.78,13.29c-2.89,3.92-4.42,7.61-5.04,11.42c-0.74,4.56,0.23,8.55,2.39,11.62 c2.28,3.24,5.91,5.49,10.28,6.34c1.71,0.33,3.48,0.53,5.3,0.62c1.85,0.09,3.78,0.07,5.75-0.04c1.23-0.06,2.29,0.89,2.35,2.12 c0.06,1.23-0.89,2.29-2.12,2.35c-2.1,0.11-4.17,0.13-6.19,0.04c-2.05-0.1-4.04-0.32-5.93-0.69c-5.52-1.07-10.15-3.98-13.1-8.16 c-2.81-3.99-4.09-9.12-3.15-14.91c0.73-4.51,2.51-8.82,5.85-13.35c3.25-4.4,7.96-9,14.64-14.19c6.86-5.33,6.86-5.54,6.83-9.97 c-0.01-1.76-0.02-4.04,0.19-7.08c0.7-9.93,3.2-18.68,5.75-27.59c1.33-4.64,2.67-9.33,3.72-14.02L39.65,2.34L39.65,2.34z M74.92,3.15c-0.22-1.21,0.58-2.38,1.8-2.6c1.21-0.22,2.38,0.58,2.6,1.8l1.87,10.02c1.05,4.69,2.39,9.38,3.72,14.02 c2.55,8.9,5.05,17.66,5.75,27.59c0.21,3.04,0.2,5.32,0.19,7.08c-0.03,4.43-0.03,4.64,6.83,9.97c6.68,5.19,11.39,9.78,14.64,14.19 c3.34,4.53,5.12,8.84,5.85,13.35c0.94,5.79-0.33,10.92-3.15,14.91c-2.95,4.19-7.58,7.09-13.1,8.16c-1.9,0.37-3.88,0.59-5.93,0.69 c-2.02,0.1-4.08,0.08-6.19-0.04c-1.23-0.06-2.18-1.11-2.12-2.35c0.06-1.23,1.11-2.18,2.35-2.12c1.97,0.11,3.89,0.13,5.75,0.04 c1.82-0.09,3.59-0.29,5.3-0.62c4.37-0.85,7.99-3.1,10.28-6.34c2.16-3.07,3.13-7.06,2.39-11.62c-0.62-3.81-2.15-7.5-5.04-11.42 c-2.98-4.05-7.42-8.35-13.78-13.29c-8.59-6.67-8.59-6.99-8.55-13.53c0.01-1.64,0.02-3.75-0.19-6.77 c-0.66-9.43-3.1-17.97-5.59-26.66c-1.31-4.59-2.64-9.22-3.77-14.27c-0.01-0.06-0.03-0.11-0.04-0.17L74.92,3.15L74.92,3.15z M39.16,2.25c0.14-0.74,0.56-1.36,1.14-1.76c0.58-0.4,1.31-0.58,2.05-0.44c0.74,0.14,1.36,0.56,1.76,1.14 c0.4,0.58,0.58,1.31,0.44,2.05l-1.87,10.02c-0.01,0.07-0.03,0.14-0.05,0.21c-1.14,5.08-2.46,9.7-3.77,14.27l0,0.01 c-2.48,8.66-4.91,17.18-5.57,26.55c-0.11,1.51-0.16,2.78-0.18,3.88c-0.02,1.11-0.02,2.04-0.01,2.85l0,0l0,0.04 c0.04,6.73,0.02,7.08-8.74,13.89c-3.17,2.46-5.86,4.76-8.12,6.94c-2.26,2.18-4.09,4.25-5.57,6.25c-1.42,1.93-2.51,3.8-3.32,5.65 c-0.8,1.85-1.33,3.68-1.63,5.55c-0.35,2.16-0.31,4.19,0.08,6.05c0.4,1.93,1.17,3.68,2.23,5.2c1.1,1.57,2.53,2.9,4.22,3.93 c1.68,1.04,3.62,1.79,5.74,2.2c0.84,0.16,1.7,0.29,2.57,0.4c0.88,0.1,1.77,0.17,2.66,0.22c0.92,0.04,1.86,0.06,2.8,0.05 c0.94-0.01,1.91-0.04,2.89-0.09l0.01,0c0.75-0.04,1.45,0.24,1.97,0.71c0.52,0.47,0.86,1.14,0.9,1.9l0,0.01 c0.04,0.75-0.24,1.45-0.7,1.96c-0.47,0.52-1.14,0.86-1.9,0.9c-1.05,0.06-2.1,0.09-3.15,0.1c-1.05,0.01-2.08-0.01-3.09-0.06 c-1.04-0.05-2.06-0.13-3.06-0.24c-1-0.12-1.99-0.26-2.95-0.45c-2.82-0.55-5.41-1.56-7.67-2.97c-2.28-1.42-4.23-3.24-5.74-5.4 c-1.48-2.1-2.54-4.5-3.1-7.14c-0.53-2.52-0.6-5.25-0.13-8.14c0.37-2.3,1.01-4.54,1.98-6.78c0.97-2.24,2.27-4.48,3.96-6.78 c1.64-2.22,3.65-4.49,6.09-6.86c2.44-2.37,5.3-4.82,8.65-7.42c6.66-5.17,6.66-5.38,6.64-9.57l0,0l0-0.04 c-0.01-0.87-0.01-1.87,0.01-3.03c0.02-1.19,0.07-2.53,0.18-4.05c0.35-4.99,1.15-9.69,2.19-14.25c1.04-4.57,2.3-8.99,3.57-13.44 l0-0.01c1.33-4.64,2.67-9.32,3.71-13.97L39.16,2.25L39.16,2.25z M74.42,3.24c-0.14-0.74,0.04-1.47,0.44-2.05 c0.4-0.58,1.02-1,1.76-1.14c0.74-0.14,1.47,0.04,2.05,0.44c0.58,0.4,1,1.02,1.14,1.76l1.87,10.01c1.04,4.65,2.38,9.33,3.71,13.97 l0,0.01c2.55,8.93,5.06,17.7,5.76,27.69c0.11,1.51,0.16,2.85,0.18,4.05c0.02,1.17,0.02,2.19,0.01,3.07h0l0,0.05 c-0.03,4.14,0,4.37,6.64,9.52c3.35,2.6,6.21,5.06,8.65,7.42c2.44,2.37,4.45,4.64,6.09,6.86c1.69,2.3,2.99,4.54,3.96,6.78 c0.97,2.24,1.61,4.49,1.98,6.78c0.47,2.89,0.4,5.62-0.13,8.14c-0.56,2.64-1.62,5.05-3.1,7.14c-1.52,2.15-3.47,3.98-5.75,5.4 c-2.26,1.41-4.85,2.43-7.67,2.97c-0.96,0.19-1.95,0.34-2.95,0.45c-0.99,0.11-2.01,0.19-3.06,0.24c-1.01,0.05-2.04,0.07-3.09,0.06 c-1.05-0.01-2.1-0.04-3.15-0.1c-0.76-0.04-1.43-0.38-1.9-0.9l-0.03-0.03c-0.45-0.52-0.71-1.21-0.68-1.94l0,0 c0.04-0.76,0.38-1.43,0.9-1.9c0.52-0.47,1.22-0.74,1.98-0.7h0c0.99,0.05,1.95,0.08,2.89,0.09c0.94,0.01,1.88-0.01,2.8-0.05 c0.89-0.04,1.78-0.11,2.66-0.22c0.87-0.1,1.73-0.23,2.57-0.4c2.12-0.41,4.06-1.16,5.74-2.2c1.68-1.04,3.11-2.37,4.22-3.93 c1.07-1.52,1.83-3.26,2.23-5.2c0.38-1.86,0.43-3.88,0.08-6.05c-0.3-1.86-0.83-3.7-1.63-5.55c-0.81-1.85-1.89-3.72-3.32-5.65 c-1.48-2-3.31-4.07-5.57-6.25c-2.26-2.18-4.95-4.48-8.12-6.94c-8.78-6.82-8.78-7.15-8.74-13.93h0l0-0.05 c0.01-1.61,0.02-3.7-0.19-6.68c-0.66-9.37-3.09-17.89-5.57-26.55l0-0.01c-1.31-4.58-2.63-9.2-3.77-14.27l-0.02-0.1l-0.02-0.11 L74.42,3.24L74.42,3.24z" />
+										<path
+											d="M25.92,107.56c-1.06,0.38-2.23-0.17-2.61-1.24s0.17-2.23,1.24-2.61c2.23-0.8,6.98,0.98,11.69,3.27 c4.36,2.13,8.79,4.67,10.75,5.82c5.32,3.1,10.15,3.78,14.46,3.3c4.4-0.48,8.37-2.17,11.78-3.73c1.55-0.71,3.48-1.85,5.53-3.05 c5.03-2.96,10.64-6.27,14.52-5.46c1.1,0.23,1.81,1.31,1.58,2.41s-1.31,1.81-2.41,1.58c-2.35-0.49-7.24,2.39-11.63,4.98 c-2.13,1.26-4.16,2.45-5.89,3.24c-3.71,1.69-8.04,3.53-13.04,4.08c-5.09,0.56-10.76-0.22-16.95-3.83 c-1.92-1.12-6.26-3.62-10.48-5.68C30.57,108.76,26.9,107.21,25.92,107.56L25.92,107.56z M39.65,2.34c0.22-1.21,1.39-2.02,2.6-1.8 c1.21,0.22,2.02,1.39,1.8,2.6l-1.87,10.02c-0.01,0.06-0.02,0.12-0.04,0.17c-1.13,5.05-2.46,9.68-3.77,14.27 c-2.48,8.69-4.93,17.23-5.59,26.66c-0.21,3.01-0.2,5.13-0.19,6.77c0.04,6.54,0.04,6.86-8.55,13.53 c-6.36,4.94-10.8,9.24-13.78,13.29c-2.89,3.92-4.42,7.61-5.04,11.42c-0.74,4.56,0.23,8.55,2.4,11.62 c2.28,3.24,5.91,5.49,10.28,6.34c1.71,0.33,3.48,0.53,5.3,0.62c1.85,0.09,3.78,0.07,5.75-0.04c1.23-0.06,2.29,0.89,2.35,2.12 c0.06,1.23-0.89,2.29-2.12,2.35c-2.1,0.11-4.17,0.13-6.19,0.04c-2.05-0.1-4.04-0.32-5.93-0.69c-5.52-1.07-10.15-3.98-13.1-8.16 c-2.81-3.99-4.09-9.12-3.15-14.91c0.73-4.51,2.51-8.82,5.85-13.35c3.25-4.4,7.96-9,14.64-14.19c6.86-5.33,6.86-5.54,6.83-9.97 c-0.01-1.76-0.02-4.04,0.19-7.08c0.7-9.93,3.2-18.68,5.75-27.59c1.33-4.64,2.67-9.33,3.72-14.02L39.65,2.34L39.65,2.34z M74.92,3.15c-0.22-1.21,0.58-2.38,1.8-2.6c1.21-0.22,2.38,0.58,2.6,1.8l1.87,10.02c1.05,4.69,2.39,9.38,3.72,14.02 c2.55,8.9,5.05,17.66,5.75,27.59c0.21,3.04,0.2,5.32,0.19,7.08c-0.03,4.43-0.03,4.64,6.83,9.97c6.68,5.19,11.39,9.78,14.64,14.19 c3.34,4.53,5.12,8.84,5.85,13.35c0.94,5.79-0.33,10.92-3.15,14.91c-2.95,4.19-7.58,7.09-13.1,8.16c-1.9,0.37-3.88,0.59-5.93,0.69 c-2.02,0.1-4.08,0.08-6.18-0.04c-1.23-0.06-2.18-1.11-2.12-2.35c0.06-1.23,1.11-2.18,2.35-2.12c1.97,0.11,3.89,0.13,5.75,0.04 c1.82-0.09,3.59-0.29,5.3-0.62c4.37-0.85,7.99-3.1,10.28-6.34c2.16-3.07,3.13-7.06,2.39-11.62c-0.62-3.81-2.15-7.5-5.04-11.42 c-2.98-4.05-7.42-8.35-13.78-13.29c-8.59-6.67-8.59-6.99-8.55-13.53c0.01-1.64,0.02-3.75-0.19-6.77 c-0.66-9.43-3.1-17.97-5.59-26.66c-1.31-4.59-2.64-9.22-3.77-14.27c-0.01-0.06-0.03-0.11-0.04-0.17L74.92,3.15L74.92,3.15z" />
+									</g>
+								</svg>
+                            </a>
+                            <a id="link-bouche" class="btn btn-outline-danger  btn-lg mx-3" data-bs-toggle="collapse" href="#collapsebouche" role="button" aria-expanded="false" aria-controls="collapsebouche" style="border-radius: 50%;">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 69.27" style="enable-background:new 0 0 122.88 69.27" xml:space="preserve">
+									<style type="text/css">
+										.st0 {
+											fill-rule: evenodd;
+											clip-rule: evenodd;
+										}
+									</style>
+									<g>
+										<path class="st0"
+											d="M61.86,26.32c14.25-5.59,26.43-1.02,37.55,8.84c-25.23,10.75-50.46,10.64-75.69,0 C34.81,25.67,46.97,20.48,61.86,26.32L61.86,26.32z M61.89,7.67c11.44-8.97,22.16-9.54,32.34-3.66 c10.12,5.85,19.51,18.25,28.4,35.12c0.48,0.91,0.26,2.01-0.47,2.67l0,0c-20.16,18.41-40.4,27.51-60.72,27.46 c-20.31-0.05-40.55-9.26-60.71-27.46c-0.77-0.7-0.94-1.82-0.46-2.7l0,0c8.85-16.25,18.2-28.85,28.42-34.96 C38.97-1.99,49.94-1.72,61.89,7.67L61.89,7.67z M92.01,7.85c-8.87-5.12-18.37-4.29-28.69,4.38l0,0c-0.81,0.68-2.01,0.7-2.84,0 c-10.8-9.08-20.53-9.63-29.51-4.26C21.81,13.42,13.24,24.84,5,39.69C23.88,56.37,42.7,64.8,61.44,64.85 c18.75,0.05,37.57-8.3,56.46-25.17C109.63,24.29,101.05,13.07,92.01,7.85L92.01,7.85z" />
+									</g>
+								</svg>
+                            </a>
+
+                        </p>
+                        <div class="collapse" id="collapsenez">
+                            <div class="card card-body  bg-transparent border-light">
+                                <blockquote>
+                                    <p>"Le nez humain est sensible à environ 10 000 odeurs différentes. Émile Peynaud (le père de l’oenologie moderne) distingue dix classes d’odeurs : animale, balsamique, boisée, chimique, éthérée, épicée, empyreumatique,
+                                        florale, fruitée, végétale. L’analyse olfactive du vin est un exercice difficile à appréhender car on doit mettre des mots sur des arômes et faire appel à notre mémoire olfactive."</p>
+                                    <footer>Source : <a href="https://www.vinibee.com/guide-degustation-vin/" class="link-warning">Vinibee</a>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="collapse pt-2" id="collapsebouche">
+                            <div class="card card-body  bg-transparent border-danger">
+                                <blockquote>
+                                    <p>"Le goût est ressenti sur les papilles gustatives situées sur différentes zones de la langue : le sucré sur le bout, le salé les côtés latéraux, l’acide sur les bords et l’amer sur le fond de la langue. La saveur sucrée
+                                        se révèle en premier, puis viennent les saveurs acides et salées. L’amer ne se manifeste qu’en fin de dégustation."</p>
+                                    <footer>Source : <a href="https://www.vinibee.com/guide-degustation-vin/" class="link-warning">Vinibee</a>
+                                    </footer>
+                                </blockquote>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gus-welcome" class="container d-block">
+                <div class="p-5 mb-4 bg-dark rounded-3">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold gus-vin-blanc">GUS - Conseiller en vins</h1>
+                        <h4 class="font-weight-light">Projet - Université de Namur (IHDCM036 - Techniques d'Intelligence Artificielle)</h4>
+                        <p class="col-md-8 fs-4 py-5">
+                            La société "Domaine du Bon Vin" aimerait joindre à son site web un bot capable, d'une part, de conseiller ses clients sur le choix de vins adaptés à des repas et d'autre part, de les renseigner sur différentes caractéristiques des vins qu'elle propose.
+                        </p>
+                        <button type="button" class="btn btn-outline-danger btn-lg gus-btn-start button-special" onclick="showChat()">
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments"
+								class="svg-inline--fa fa-comments fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 576 512">
+								<path fill="currentColor"
+									d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z">
+								</path>
+							</svg>
+							<span>Démarrage</span>
+						</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gus-chat" class="container hide">
+                <div class="text-left">
+                    <div class="gus-avatar" id="gus-avatar">
+
+                        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.16 34.7"><defs><style>.cls-1{fill:#fff;stroke:#000;stroke-miterlimit:10;stroke-width:0.2px;fill-rule:evenodd;}</style></defs><path id="path0" class="cls-1" d="M10.36,15.38c-2.54,8.77-2,13.14,2,16.39C15.14,34,15.46,35,15.54,41.53c0,3.61,0,4.11-.25,4.59-.66,1.2-1.59,1.69-3.46,1.83-1.19.09-1.66.25-1.66.57,0,.08,2.74.15,6.16.15s6.17-.07,6.17-.15c0-.32-.48-.48-1.73-.57-1.73-.12-2.7-.61-3.27-1.63l-.42-.74.05-4.15c.07-6.45.44-7.58,3.23-9.74,3.29-2.56,4-5.06,3-11.44A35.71,35.71,0,0,0,22,14.47c-.15-.28-.51-.3-5.71-.3H10.72l-.36,1.21" transform="translate(-8.72 -14.07)"/></svg>
+
+
+
+                    </div>
+                    <div class="gus-info-txt">
+                        <span>Mister Gus</span> <span class="statut">En ligne</span>
+                        <span id="action" class="text-action">Bienvenue dans le chat</span>
+                    </div>
+
+                </div>
+                <div id="gus-conversation">
+                    <div class='gus-answer'> Bonjour, je suis Mister Gus conseiller en vin. <br />En quoi puis-je vous être utile ?<br /> <span class="gus-vin-blanc">Je vous écoute...</span></div>
+                </div>
+                <div class="user-text-container" id="user-conversation">
+                    <input class="user-text" placeholder="Aa" autofocus id="input-gus" />
+                    <button type="button" onclick="runSpeechRecognition()" class="btn btn-outline-light btn-lg btn-speech" id="startspeech">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+							class="bi bi-mic" viewBox="0 0 16 16">
+							<path
+								d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+							<path
+								d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
+						</svg>
+					</button>
+                    <button type="button" onclick="stopSpeechRecognition()" class="btn btn-danger btn-lg btn-speech d-none" id="stopspeech">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+							class="bi bi-mic" viewBox="0 0 16 16">
+							<path
+								d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+							<path
+								d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
+						</svg>
+					</button>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="mt-auto text-white-50 text-center">
+            <p>@2021-2022 - Mister Gus bot en vins - <span class="gus-vin-blanc"> Domaine du Bon Vin</span><br /> Tau-Prolog: <span class="text-white">T. Wéry</span> & <span class="text-white">A. Degraeve </span> - Design: <span class="text-white">A. Degraeve </span></p>
+        </footer>
+    </div>
+
+    <script src="scripts/jquery-3-6-0.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+
+    <script src="scripts/tau-prolog.js"></script>
+    <script src="scripts/prolog_session.js"></script>
+    <script src="scripts/vins.js"></script>
+    <script src="scripts/speech.js"></script>
+</body>
+
+</html>
